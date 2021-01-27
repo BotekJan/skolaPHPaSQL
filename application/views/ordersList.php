@@ -1,5 +1,11 @@
+
+
 <div class="col-md-8 offset-md-2">
-    <h1 class="text-center">Seznam objednávek</h1>
+    <h1 class="text-center">Seznam objednávek firmy<br> <?php
+         foreach ($customerName as $key => $row) {
+            echo $row->firma;
+        }
+    ?></h1>
 
     <?php
 

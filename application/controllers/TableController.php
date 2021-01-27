@@ -21,6 +21,7 @@ class TableController extends CI_Controller {
     public function zobrazObjednavkyZakaznika($ID){
         $data["objednavky"] = $this->CustomersModel->getObjednavky($ID);
         $data["title"] = "Seznam objednávek";
+        $data["customerName"] = $this->CustomersModel->getCustomer($ID);
         $data["main"] = "ordersList";
         $this->layout->generate($data);
     }
