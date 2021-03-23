@@ -27,7 +27,9 @@ class CustomersModel extends CI_Model {
         $this->db->from('aa_zakaznik');
         $this->db->where('id', $ID);
 
-        return $this->db->get()->result();
+        $result = $this->db->get()->result();
+
+        return $result[0]->firma;
     }
 }
 
